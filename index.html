@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
+  <title>Decodificador de Texto Luiz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  <header> <div class="header"> <img class="header__logo" src="./assents/logo.png" alt="Logo Alura"> </header> </div>
+  <main>
+  <div class="main">
+    <div class="left">
+      <textarea id="inserirTexto" class="inserir__texto" placeholder="Enter your text"></textarea>
+      <div class="left__footer">
+        <img src="./assents/bi_exclamation-circle-fill.png" alt="Imagem alerta">
+        <span class="left__info">Only lowercase letters and no accents.</span>
+          <div class="left__buttoes">
+            <button id="botaoEncriptar" class="botao__encriptar">Encrypt</button>
+            <button id="botaoDesencriptar" class="botao__desencriptar">Decrypt</button>
+          </div>
+      </div>
+    </div>
+
+    <div id="right" class="right">
+      <img id="garoto" class="garoto" src="./assents/imagem.png" alt="Imagem garoto">
+
+        <textarea id="mensagemFinal" class="mensagem__final" placeholder= "No messages found"></textarea>
+        <p id="rightInfo" class="right__info">Enter a text that you want to encrypt or decrypt.</p>
+      
+      <button id="botaoCopiar" class="botao__copiar oculto">Copy</button>
+    </div>
+  </div>
+
+  </main>
+
+  <footer>
+    <p>Developed by Luiz Paulo Silva</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
