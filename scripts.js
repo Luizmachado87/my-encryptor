@@ -39,7 +39,7 @@ const reset = () => {
     inserirTexto.focus();
 };
 
-const encriptar = (texto) => {
+const encriptar = (texto) => { // confere se é isso mesmo.
     let resultado = '';
     for (let char of texto) {
         let substituido = false;
