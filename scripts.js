@@ -39,12 +39,20 @@ const reset = () => {
     inserirTexto.focus();
 };
 
-
 const encriptar = (texto) => {
-    for (let [original, substituto] of remplazar) {
-        texto = texto.replaceAll(original, substituto);
+    let resultado = '';
+    for (let char of texto) {
+        let substituido = false;
+        for (let [original, substituto] of remplazar) {
+            if (char === original) {
+                resultado += substituto;
+                substituido = true;
+                break;
+            }
+        }
+        if (!substituido) resultado += char;
     }
-    return texto;
+    return resultado;
 };
 
 const desencriptar = (texto) => {
@@ -56,8 +64,8 @@ const desencriptar = (texto) => {
 
 const validarTexto = (texto) => {
     const regex = /^[a-z\s]+$/; 
+    responsiveVoice.speak(texto, 'UK English Male', { rate: 1.0 }); // Estava no local errado, depois do return
     return regex.test(texto);
-    responsiveVoice.speak(texto, 'UK English Male', { rate: 1.0 });
 
 };
 
